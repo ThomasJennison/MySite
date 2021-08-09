@@ -5,21 +5,14 @@ export class Home extends Component {
 
   render () {
     return (
-      <div>
-        <h1>Hello, world!</h1>
-        <p>Welcome to your new single-page application, built with:</p>
-        <ul>
-          <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
-          <li><a href='https://facebook.github.io/react/'>React</a> for client-side code</li>
-          <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
-        </ul>
-        <p>To help you get started, we have also set up:</p>
-        <ul>
-          <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
-          <li><strong>Development server integration</strong>. In development mode, the development server from <code>create-react-app</code> runs in the background automatically, so your client-side resources are dynamically built on demand and the page refreshes when you modify any file.</li>
-          <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your <code>dotnet publish</code> configuration produces minified, efficiently bundled JavaScript files.</li>
-        </ul>
-        <p>The <code>ClientApp</code> subdirectory is a standard React application based on the <code>create-react-app</code> template. If you open a command prompt in that directory, you can run <code>npm</code> commands such as <code>npm test</code> or <code>npm install</code>.</p>
+        <div>
+            <h1 className="text-center" >Welcome to my site!</h1>
+            <div className="text-center">
+                <img className="img-thumbnail rounded-circle z-depth-2"  alt="100x100" src="https://media-exp1.licdn.com/dms/image/C5603AQH5IROMz-2pXg/profile-displayphoto-shrink_800_800/0/1617758159796?e=1633564800&v=beta&t=pyPkGi-NpGZaqQO3FZM4TpdK30shMl83YFevfClGu3U"></img>
+            </div>
+            <p className="text-center">Im a software developer from Ontario Canada</p>
+            <p className="text-center">I like to write and play music, take photos and take on more projects than ill probably ever end up finising :)</p>
+            <p className="text-center">I built this site to host stuf i make, have a look around</p>
       </div>
     );
   }
