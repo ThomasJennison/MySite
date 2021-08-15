@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios'
 
 export class Photos extends Component {
     static displayName = Photos.name;
@@ -13,7 +14,13 @@ export class Photos extends Component {
     }
 
     fileUploadHandler = () => {
+        const fd = new FormData();
+        fd.append('image', this.state.selectedFile, this.state.selectedFile.name)
 
+        axios.post('https://localhost:5001/photos/OnPostUploadAsync', fd)
+            .then(res => {
+                console.log(res);
+            })
     }
 
     render() {
