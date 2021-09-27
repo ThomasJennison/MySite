@@ -1,4 +1,4 @@
-using AspNetCore.RouteAnalyzer;
+
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -77,12 +77,10 @@ namespace MySite
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
-                
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
-                
             });
 
             app.UseSpa(spa =>
