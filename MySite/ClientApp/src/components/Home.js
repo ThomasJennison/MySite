@@ -1,21 +1,36 @@
 import React, { Component } from 'react';
 import './Home.css';
 
+import profilePhoto from './cbPortriat.png';
+
+
+
 export class Home extends Component {
   static displayName = Home.name;
 
   render () {
     return (
         <div>
-            <h1 className="text-center" >Welcome to my site!</h1>
-            <div className="text-center">
-                <img className="img-thumbnail rounded-circle z-depth-2 profile-photo"
-                     alt="photo of me"
-                     src="https://media-exp1.licdn.com/dms/image/C5603AQH5IROMz-2pXg/profile-displayphoto-shrink_800_800/0/1617758159796?e=1633564800&v=beta&t=pyPkGi-NpGZaqQO3FZM4TpdK30shMl83YFevfClGu3U"></img>
+            <div className="container">
+                <div className="row">
+                    <div className="col">
+                        <div className="card-body bg-dark about-card">
+                            <p className="card-text text-center text-light">Im a software developer from Ontario Canada</p>
+                            <p className="card-text text-center text-light">I like to write and play music, take photos and take on more projects than ill probably ever end up finising :)</p>
+                            <p className="card-text text-center text-light">I built this site to host stuf i make, have a look around</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col">
+                        <div className="text-center card-body bg-dark profile-photo-card">
+                                <img src={profilePhoto} alt="pixel art of me"
+                                     className="img-thumbnail rounded-circle z-depth-2 profile-photo" />
+                        </div>
+                    </div>
+                </div>
+       
             </div>
-            <p className="text-center">Im a software developer from Ontario Canada</p>
-            <p className="text-center">I like to write and play music, take photos and take on more projects than ill probably ever end up finising :)</p>
-            <p className="text-center">I built this site to host stuf i make, have a look around</p>
       </div>
     );
   }

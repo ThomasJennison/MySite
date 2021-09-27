@@ -25,23 +25,23 @@ export class NavMenu extends Component {
   render () {
     return (
       <header>
-        <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" light>
+        <Navbar className="navbar-expand-sm navbar-toggleable-sm bg-dark navbar-dark border-bottom box-shadow mb-3">
           <Container>
             <NavbarBrand tag={Link} to="/">Thomas Jennison</NavbarBrand>
             <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
             <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
               <ul className="navbar-nav flex-grow">
                 <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
+                  <NavLink tag={Link} className="text-light" to="/">Home</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/photos">Photos</NavLink>
+                    <NavLink tag={Link} className="text-light" to="/photos">Photos</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/fetch-data">Music</NavLink>
+                    <NavLink tag={Link} className="text-light" to="/fetch-data">Music</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink tag={Link} className="text-dark" to="/fetch-data">Projects</NavLink>
+                    <NavLink tag={Link} className="text-light" to="/fetch-data">Projects</NavLink>
                 </NavItem>
                 <LoginMenu>
                 </LoginMenu>

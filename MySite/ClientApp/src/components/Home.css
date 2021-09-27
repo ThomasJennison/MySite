@@ -1,4 +1,22 @@
 ﻿.profile-photo{
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
+    align-content:center;
+    vertical-align:central;
+    margin: 5px
+}
+
+.profile-photo-card {
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-: 1px;
+    align-content: center;
+    vertical-align: central;
+}
+
+.about-card{
+    margin: 5px;
+    vertical-align: middle;
+    align-content:center;
 }

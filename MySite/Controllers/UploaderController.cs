@@ -42,11 +42,16 @@ namespace MySite.Controllers
 
                 foreach (var file in form.Files)
                 {
-                    using (var fs = new FileStream(Path.Combine(path, file.FileName), FileMode.Create))
+                    string destinationPath = Path.Combine(path, file.FileName);
+                    using (var fs = new FileStream(destinationPath, FileMode.CreateNew))
                     {
                         file.CopyToAsync(fs);
                     }
-                    var photoCast = file as Photo;
+
+                    Photo photoRecord = new Photo()
+                    {
+                        
+                    };
                     _db.Photos.Add(photoCast);
                 }
 
