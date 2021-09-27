@@ -23,5 +23,7 @@ namespace MySite.Data
 
         }
 
+        public DbSet<Photo> Photos { get; set; }
+
     }
 }
