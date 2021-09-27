@@ -48,11 +48,9 @@ namespace MySite.Controllers
                         file.CopyToAsync(fs);
                     }
 
-                    Photo photoRecord = new Photo()
-                    {
-                        
-                    };
-                    _db.Photos.Add(photoCast);
+                    Photo photoRecord = new Photo(destinationPath,1,1,1);
+                    
+                    _db.Photos.Add(photoRecord);
                 }
 
                 return new { Success = true };
