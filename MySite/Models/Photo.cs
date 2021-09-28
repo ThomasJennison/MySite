@@ -16,12 +16,16 @@ namespace MySite.Models
         public long Size { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
-        public Photo(string source, long size, int width, int height)
+        public string Name { get; set; }
+        public string Tag { get; set; }
+        public string ImageB64 { get; set; }
+        public Photo(string name, string source, long size, int width, int height)
         {
             Source = source;
             Size = size;
             Width = width;
             Height = height;
+            Name = name;
         }
     }
 }

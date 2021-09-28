@@ -20,7 +20,8 @@ namespace MySite.Controllers
         private readonly IWebHostEnvironment _hostingEnvironment;
         private readonly ILogger<UploaderController> _logger;
         private readonly ApplicationDbContext _db;
-        public UploaderController(IWebHostEnvironment hostingEnvironment, ILogger<UploaderController> logger, ApplicationDbContext db)
+        public UploaderController(IWebHostEnvironment hostingEnvironment, 
+            ILogger<UploaderController> logger, ApplicationDbContext db)
         {
             _hostingEnvironment = hostingEnvironment;
             _logger = logger;
@@ -45,12 +46,12 @@ namespace MySite.Controllers
                     string destinationPath = Path.Combine(path, file.FileName);
                     using (var fs = new FileStream(destinationPath, FileMode.CreateNew))
                     {
-                        file.CopyToAsync(fs);
+                        file.CopyTo(fs);
                     }
 
-                    Photo photoRecord = new Photo(destinationPath,1,1,1);
-                    
+                    Photo photoRecord = new Photo(file.FileName ,destinationPath,1,1,1);
                     _db.Photos.Add(photoRecord);
+                    _db.SaveChanges();
                 }
 
                 return new { Success = true };

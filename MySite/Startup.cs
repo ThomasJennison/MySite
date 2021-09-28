@@ -51,10 +51,11 @@ namespace MySite
             {
                 configuration.RootPath = "ClientApp/build";
             });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ApplicationDbContext db)
         {
             if (env.IsDevelopment())
             {
@@ -67,7 +68,8 @@ namespace MySite
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            
+      
+            db.Database.Migrate();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
@@ -82,6 +84,7 @@ namespace MySite
                     pattern: "{controller}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+
 
             app.UseSpa(spa =>
             {
