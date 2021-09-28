@@ -31,7 +31,8 @@ Its in a fairly early stage and theres more to do still
   </tr>
   <tr>
     <td>
-      <p>Embbeded bandcamp controller (get package name), and some details about the albums</p>
+      <p>A page with some details about recordings, used React bandcamp control (BandcampPlayer from 'react-bandcamp' https://www.npmjs.com/package/react-bandcamp) <br/>
+         frontend file: https://github.com/ThomasJennison/MySite/blob/master/MySite/ClientApp/src/components/Music.js</p>
     </td>
   </tr>
   <tr>
