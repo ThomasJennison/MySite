@@ -22,6 +22,25 @@ Its in a fairly early stage and theres more to do still
     </td>
   <tr>
 </table>
+    
+<table border="1" style="width:300px;">
+  <tr>
+    <td align="center">
+    <h2>Music</h1>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>Embbeded bandcamp controller (get package name), and some details about the albums</p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+        <img src="https://user-images.githubusercontent.com/7981120/135157500-a913febb-16e4-476a-8f0a-35aa219cf33c.gif" alt="Mood Log Page Gif" style="width:800;height:800px;"> 
+        <span>
+    </td>
+  <tr>
+</table>
 
 --------------------------------------------------------------------------------------------------------
     
