@@ -8,11 +8,13 @@ Its in a fairly early stage and theres more to do still
   <tr>
     <td align="center">
     <h2>Home</h1>
+      
     </td>
   </tr>
   <tr>
     <td>
       <p>Splash screen with a photo gallery</p>
+      <p>Controller for getting photos: https://github.com/ThomasJennison/MySite/blob/master/MySite/Controllers/PhotoViewerController.cs</p>
     </td>
   </tr>
   <tr>
