@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import authService from './api-authorization/AuthorizeService'
 import './Photos.css';
+import { Tab } from 'bootstrap';
 
-export class Photos extends Component {
-    static displayName = Photos.name;
+export class PhotosAdmin extends Component {
+    static displayName = PhotosAdmin.name;
 
     componentDidMount() {
         this.getImages();
@@ -46,7 +47,7 @@ export class Photos extends Component {
                 alert("Upload Ok");
             }
         })
-        return post;   
+        return post;
     }
 
     static renderPhotos(images) {
@@ -54,7 +55,9 @@ export class Photos extends Component {
             <table className='table table-striped' aria-labelledby="tabelLabel">
                 <thead>
                     <tr>
-                        <th>Photo</th>
+                        <th>Name</th>
+                        <th>Tag</th>
+                        <th>Description</th>
                         <th>Photo</th>
                     </tr>
                 </thead>
@@ -62,37 +65,67 @@ export class Photos extends Component {
                     {images.map(image =>
                         <tr key={image.name}>
                             <td>{image.name}</td>
-                            <img className="profile-photo" src={image.imageB64}></img>
+                            <td>dog</td>
+                            <td>doggy</td>
+                            <img style={{margin:2+'em'}} className="profile-photo" src={image.imageB64}></img>
+
                         </tr>
                     )}
                 </tbody>
             </table>
         );
     }
-    
+
     render() {
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
-            : Photos.renderPhotos(this.state.existingImages);
+            : PhotosAdmin.renderPhotos(this.state.existingImages);
         return (
             <div className="container-fluid">
-                <div className="row">
-                    <div className="col">
-                        <div className="card">
-                            {contents}
-                        </div>
-                    </div>
-                </div>
                 <div className="row">
                     <div className="col">
                         <div className="card">
                             <div className="card-body">
                                 <h5 class="card-header">Photo Upload</h5>
                                 <form className="card-body" onSubmit={e => this.submit(e)}>
-                                    <input type="file" onChange={e => this.setFile(e)} />
-                                    <button className="btn btn-primary" type="submit">Upload</button>
+                                    <div className="container">
+                                        <div className="row">
+                                         
+                                            <div className="col-8 text-left">
+                                                <input type="file" onChange={e => this.setFile(e)} />
+                                            </div>
+                                            <div className="col-4 text-right">
+                                                <button className="btn btn-primary" type="submit">Upload</button>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-6">
+                                                <input/>
+                                            </div>
+                                            <div className="col-2 text-left">
+                                                <label>Tag</label>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-6">
+                                                <input />
+                                            </div>
+                                            <div className="col-2 text-left">
+                                                <label>Description</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </form>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col">
+                        <div className="card">
+                            {contents}
                         </div>
                     </div>
                 </div>

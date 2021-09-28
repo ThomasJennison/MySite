@@ -1,6 +1,4 @@
-﻿
-
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -16,23 +14,14 @@ using System.Threading.Tasks;
 
 namespace MySite.Controllers
 {
-    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class PhotoViewerController : ControllerBase
     {
-
-        private readonly ILogger<PhotosController> _logger;
-        private string filename;
-        private string extension;
-        private readonly IWebHostEnvironment _hostingEnviroment;
         private readonly ApplicationDbContext _dbContext;
 
-        public PhotoViewerController(ILogger<PhotosController> logger, IWebHostEnvironment hostingEnvironment,
-             ApplicationDbContext db)
+        public PhotoViewerController(ApplicationDbContext db)
         {
-            _logger = logger;
-            _hostingEnviroment = hostingEnvironment;
             _dbContext = db;
         }
 
@@ -42,7 +31,7 @@ namespace MySite.Controllers
             var data = _dbContext.Photos.OrderBy(a => a.Source).ToList<Photo>();
 
             var photos = new List<Photo>();
-            foreach(var photo in data)
+            foreach (var photo in data)
             {
                 var imageBytes = System.IO.File.ReadAllBytes(photo.Source);
                 var imageBase64 = Convert.ToBase64String(imageBytes);
@@ -54,4 +43,3 @@ namespace MySite.Controllers
         }
     }
 }
-
