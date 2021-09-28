@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 import './Home.css';
 import Gallery from 'react-grid-gallery';
 import profilePhoto from './cbPortriat.png';
@@ -24,8 +24,6 @@ export class Home extends Component {
                 thumbnail: images[i].imageB64,
                 thumbnailWidth: 100,
                 thumbnailHeight: 100,
-                caption: "dog",
-                tags: [{ value: "doggy", title: "doggy" }],
             })
         }
         return (
@@ -34,9 +32,9 @@ export class Home extends Component {
                     <div className="col">
                         <div className="card">
                             <h1 className="card-header">Photos</h1>
-                            <p className="card-text">blah blah blah blah <br/>
+                            <p className="card-text">blah blah blah blah <br />
                                 Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah <br />
-                                    Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah </p>
+                                Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah </p>
                         </div>
                     </div>
                 </div>
@@ -67,15 +65,12 @@ export class Home extends Component {
                         <div className="col-sm-7">
                             <div className="card card-body about-card">
                                 <h1 className="card-header">About</h1>
-                                <p className="card-text text-center">Blah Blah <br/>
-                                    Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah <br />
-                                    Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah <br />
-                                    Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah <br />
-                                    Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah <br />
-                                    Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah <br />
-                                    Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah <br />
-                                    Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah <br />
-                                    Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah
+                                <p className="card-text text-center">
+                                    Hey, I’m Thomas, welcome to my site! <br />
+                                    I built it for kicks as a project to get more familiar with Asp.Net Core + React.<br />
+                                    I’m a software developer / musician from Ontario. When I’m not behind a screen I like to Kayak and go for hikes.<br />
+                                    I love programming, music, DIY electronics (although I don’t tinker and build them as much these days), nature, music, art (and my lovely spouse 😊)<br />
+                                    Have a look around!<br/>
                                 </p>
                             </div>
                         </div>

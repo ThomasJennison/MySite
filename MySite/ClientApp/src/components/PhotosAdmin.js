@@ -65,8 +65,8 @@ export class PhotosAdmin extends Component {
                     {images.map(image =>
                         <tr key={image.name}>
                             <td>{image.name}</td>
-                            <td>dog</td>
-                            <td>doggy</td>
+                            <td>.....</td>
+                            <td>.....</td>
                             <img style={{margin:2+'em'}} className="profile-photo" src={image.imageB64}></img>
 
                         </tr>
