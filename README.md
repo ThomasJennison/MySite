@@ -47,6 +47,7 @@ Its in a fairly early stage and theres more to do still
 Whats left to finish:
 - Add projects into the projects page, I will probabbly just hardcode html or make a blog function.
 - Add email authentication interface 
+- Tidy up music page
 - Tests
 - Try embedding unity / web gl
 
