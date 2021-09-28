@@ -34,13 +34,14 @@ Its in an early stage and there’s more to do still
   <tr>
     <td>
       <p>Lets a user with a login add photos to the main screen. more work to be done here still… need to lock it out so only admin users can do that, and link up the on-screen input’s for photo data</p>
+      
       <p>Uploader controller: https://github.com/ThomasJennison/MySite/blob/master/MySite/Controllers/UploaderController.cs</p>
       <p>Frontend file: https://github.com/ThomasJennison/MySite/blob/master/MySite/ClientApp/src/components/PhotosAdmin.js</p>
     </td>
   </tr>
   <tr>
     <td align="center">
-        <img src="https://user-images.githubusercontent.com/7981120/135157500-a913febb-16e4-476a-8f0a-35aa219cf33c.gif" alt="Photo upload gif" style="width:800;height:800px;"> 
+        <img src="https://user-images.githubusercontent.com/7981120/135161299-97fa15e9-307e-4788-b39b-055ba5fcdecc.gif" alt="Photo upload gif" style="width:800;height:800px;"> 
         <span>
     </td>
   <tr>
